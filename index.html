@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--login screen-->
+  <div id="loginScreen" class="container">
+    <h1>Quiz App</h1>
+
+    <input type="text" id="Username" placeholder="Enter your name">
+
+    <select id="Subject">
+      <option value="">Select Subject</option>
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="maths">Maths</option>
+      <option value="english">English</option>
+      <option value="french">French</option>
+    </select>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+
+  <!--quiz screen-->
+  <div id="quizScreen" class="container" style="display:none;">
+    <h2 id="welcomeText"></h2>
+    <p id="timer"></p>
+    <p id="progress"></p>
+
+    <h3 id="question"></h3>
+    <div id="options"></div>
+
+    <div class="buttons">
+      <button onclick="prevQuestion()">Previous</button>
+      <button onclick="nextQuestion()">Next</button>
+      <button onclick="submitQuiz()">Submit</button>
+    </div>
+  </div>
+
+
+  <!--result screen-->
+  <div id="resultScreen" class="container" style="display:none;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
