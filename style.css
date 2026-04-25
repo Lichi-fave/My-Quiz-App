@@ -51,7 +51,7 @@ select {
   font-size: 15px;
 }
 
-.startBtn {
+.startButton {
   width: 100%;
   padding: 14px;
   background: #5b2be0;
@@ -62,7 +62,7 @@ select {
   cursor: pointer;
 }
 
-.startBtn:hover {
+.startButton:hover {
   opacity: 0.9;
 }
 

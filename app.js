@@ -153,8 +153,8 @@ function showResults() {
     let wrong = questions.length - score;
     
     let html = `
-    <h2 class="result-title>Awesome!</h2> 
-    <p clas="final-score">Final Score:${score}/${questions.length}</p>
+    <h2 class="result-title">${score == 5 ? "Awesome!" : "Try Again!"}</h2> 
+    <p class="final-score">Final Score: ${score}/${questions.length}</p>
     <h3>Detailed Review</h3>
     `;
 
@@ -164,10 +164,10 @@ function showResults() {
 
     html += `
       <div class="review-item ${userAns === correctAns ? "correct" : "wrong"}">
-        <p class="review-question">${i+1}. ${q.question}</p>
+        <p class="review-question">${i+1}. ${q.q}</p>
         <p class="review-answer"><b>Your Answer:</b> ${
           userAns !== null? q.options[userAns] : "Not answered"}</p>
-        <p class="review-answer><b>Correct Answer:</b> ${q.options[correctAns]}</p>
+        <p class="review-answer"><b>Correct Answer:</b> ${q.options[correctAns]}</p>
       </div>
     `;
   });
@@ -175,14 +175,9 @@ function showResults() {
     html += `
      <div class="results-buttons"> 
       <button onclick="location.reload()">Restart Quiz</button>
-       <button onclick="goHome()"Return to Dashboard</button>
      </div>
     `;
       
     div.innerHTML = html;
-}
-
-function goHome() {
-    location.reload();
 }
 
