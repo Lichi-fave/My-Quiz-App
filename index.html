@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Quiz App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Quiz App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!--login screen-->
   <div id="loginScreen" class="container">
-    <h1>Quiz App</h1>
+    <h1 class="title">Quiz App</h1>
+    <p class="subtitle">Ready to test your knowledge?</p>
 
-    <input type="text" id="Username" placeholder="Enter your name">
+    <label>Your Name</label>
+    <input type="text" id="username" placeholder="Enter your name">
 
-    <select id="Subject">
-      <option value="">Select Subject</option>
+    <label>Select Subject</label>
+    <select id="subject">
+      <option value="">Choose a Subject...</option>
       <option value="python">Python</option>
       <option value="javascript">JavaScript</option>
       <option value="maths">Maths</option>
@@ -22,17 +26,26 @@
       <option value="french">French</option>
     </select>
 
-    <button onclick="startQuiz()">Start Quiz</button>
+    <button class="startButton" onclick="startQuiz()">Start Quiz</button>
   </div>
 
 
   <!--quiz screen-->
   <div id="quizScreen" class="container" style="display:none;">
-    <h2 id="welcomeText"></h2>
-    <p id="timer"></p>
-    <p id="progress"></p>
 
-    <h3 id="question"></h3>
+    <div class="topBar">
+        <div id="welcomeText"></div>
+        <div id="timer"></div>
+    </div>
+
+    <div id="progress" class="progress-text"></div>
+
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+
+
+    <h2 id="question"></h2>
     <div id="options"></div>
 
     <div class="buttons">
